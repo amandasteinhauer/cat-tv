@@ -3,12 +3,14 @@
 {% block title %} CAT TV {% endblock %}
 
 {% block content %}
+    
     <div class="container">
         <h2>
-             Cat TV enriches the lives of indoor cats by providing videos and games of their faviourite prey to bring out their hunter instincts!
-        </h2>
+            Cat TV enriches the lives of indoor cats by providing videos and games of their favourite prey to bring out their hunter instincts!
+       </h2>
+        <div class="jumbotron catimage">
+            <img class="jumbo-image" src="{{ url_for('static', filename= 'images/eye-catchy-L8Qio5duBlQ-unsplash.jpg') }}" alt="Cat watching TV"/>
+        </div>
     </div>
+
 {% endblock %}
-
-
-

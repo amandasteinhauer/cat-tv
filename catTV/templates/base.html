@@ -24,7 +24,7 @@
     <title>
         {% block title %}{% endblock %}
     </title>
-    <nav class="navbar navbar-fixed-top navbar-default">
+    <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -33,7 +33,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Cat TV</a>
+                <a class="navbar-brand" href="{{ url_for('home') }}">Cat TV</a>
             </div>
             <div class="collapse navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
                 <ul class="nav navbar-nav">
@@ -46,6 +46,9 @@
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" href="{{ url_for('birds') }}">Birds</a>
                     </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -57,5 +60,13 @@
 </header>
 <body>
     {% block content %}{% endblock %}
+
+    <footer class="footer">
+        <div class="container">
+            <p> By 
+                <a href="https://amandasteinhauer.github.io/personal-website/">Amanda Steinhauer</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
