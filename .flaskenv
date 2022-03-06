@@ -1,0 +1,2 @@
+FLASK_APP=catTV
+FLASK_ENV=development
