@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
 {% block cssLinks %}
-<!-- Custom CSS-->
-<link rel="stylesheet" href="{{ url_for('static', filename= 'css/contact.css') }}">
+    {{ super() }}
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/contact.css') }}">
 {% endblock %}
 
 {% block title %} Contact Us {% endblock %}

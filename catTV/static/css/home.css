@@ -1,3 +1,19 @@
+header {
+    background-color: chocolate;
+    color: white;
+    padding: 40px 0px;
+}
+
+.header h1{
+    font-size: 60px;
+    color: white;
+}
+
+.header p{
+    font-size: 24px;
+}
+
+
 .jumbo-image {
     max-width: 100%;
     height: auto;

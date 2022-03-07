@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
 {% block cssLinks %}
-<!-- Custom CSS-->
-<link rel="stylesheet" href="{{ url_for('static', filename= 'css/about.css') }}">
+    {{ super() }}
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/about.css') }}">
 {% endblock %}
 
 {% block title %} About CAT TV {% endblock %}
