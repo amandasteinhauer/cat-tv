@@ -1,0 +1,49 @@
+#games-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+
+#controls .btn-big {
+    width: 100px;
+    height: 50px;
+    background-color: saddlebrown;
+    color: white;
+    margin-right: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+#controls .more-less {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+}
+
+#controls .more-less p {
+    margin: 0 0;
+}
+
+#controls .btn-small {
+    margin: 0px 20px;
+    border: none;
+    padding: 0 10px;
+    background-color: saddlebrown;
+    color: white;
+    border-radius: 8px;
+}
+
+#controls .btn-small:disabled{
+    background-color: lightgray;
+}
+
+#bouncingBallGame canvas {
+    background-color: #eb9414;
+    width: 100%;
+}

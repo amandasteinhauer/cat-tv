@@ -1,0 +1,55 @@
+{% extends 'base.html' %} 
+
+{% block cssLinks %} 
+{{ super() }}
+<!-- Custom CSS-->
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename= 'css/games.css') }}"
+/>
+{% endblock %} 
+
+{% block title %} Cat TV - Games {% endblock %} 
+
+{% block content %}
+<div class="container">
+  <h1>Cats love games</h1>
+  <p>Play motion games to excite your cat!</p>
+  <br />
+  <br />
+  <div id="games-container">
+    <div class="title">
+      <h2>Bouncing Ball</h2>
+    </div>
+    <div id="controls">
+      <button id="bouncingBallStart" class="btn-big">Start</button>
+      <button id="bouncingBallStop" class="btn-big">Stop</button>
+      <div class="more-less">
+        <p>Number of Balls: </p>
+        <button id="lessBalls" class="btn-small">-</button>
+        <div id="numBalls">1</div>
+        <button id="moreBalls" class="btn-small">+</button>
+      </div>
+    </div>
+    <div>
+      <div class="game-cell">
+        <div id="bouncingBallGame">
+          <canvas id="bouncingBallCanvas"> </canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} 
+
+{% block scripts %} 
+{{ super() }}
+<script
+  type="module"
+  src="{{ url_for('static', filename= 'js/bouncingBall.js') }}"
+></script>
+<script
+  type="module"
+  src="{{ url_for('static', filename= 'js/Ball.js') }}"
+></script>
+{% endblock %}

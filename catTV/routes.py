@@ -19,6 +19,11 @@ def birds():
     prev_url = url_for('birds', page=videos.prev_num) if videos.has_prev else None
     return render_template('videos.html',  videos=videos.items, next_url=next_url, prev_url=prev_url)
 
+
+@app.route("/games")
+def games():
+    return render_template('games.html')
+
 @app.route("/contact")
 def contact():
     return render_template('contact.html')
