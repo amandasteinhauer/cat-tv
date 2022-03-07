@@ -1,24 +1,37 @@
 {% extends 'base.html' %}
 
+{% block cssLinks %}
+    {{ super() }}   
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/videos.css') }}">
+{% endblock %}
+
 {% block title %} Cat TV - Birds {% endblock %}
 
 {% block content %}
     
     <div class="container">
-        <h2>
+        <h1>
             Cats love birds
-        </h2>
-        {% for video in videos %}
-            {% include '_post.html' %}
-        {% endfor %}
+        </h1>
+        <p>
+            Play a video of birds to excite your cat!
+        </p>
+        <br/>
+        <br/>
+        <div id="video-container">
+            {% for video in videos %}
+                {% include '_post.html' %}
+            {% endfor %}
+        </div>
         <nav aria-label="...">
             <ul class="pager">
-                <li class="previous{% if not prev_url %} disabled{% endif %}">
+                <li class="previous{% if not prev_url %} hidden{% endif %}">
                     <a href="{{ prev_url or '#' }}">
                         <span aria-hidden="true">&larr;</span> Newer posts
                     </a>
                 </li>
-                <li class="next{% if not next_url %} disabled{% endif %}">
+                <li class="next{% if not next_url %} hidden{% endif %}">
                     <a href="{{ next_url or '#' }}">
                         Older posts <span aria-hidden="true">&rarr;</span>
                     </a>

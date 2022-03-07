@@ -1,5 +1,3 @@
-
-
 nav {
     background-color: black;
 }
@@ -38,9 +36,9 @@ nav {
     background-color: black;
 }
 
-body {
+#main-body {
     background-color: #fff4de;
-    padding-top: 50px;
+    padding-top: 80px;
 }
 
 body .content {

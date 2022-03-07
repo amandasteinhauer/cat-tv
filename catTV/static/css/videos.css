@@ -1,0 +1,20 @@
+#video-container .video-cell {
+    width: 70px;
+    border: none;
+}
+
+#video-container .video-cell:hover{
+    background-color: #fff4de;
+}
+
+table{
+    border: 1px grey solid;
+}
+
+.pager {
+    background-color: #fff4de;
+}
+
+.pager .next a, .pager .previous a{
+    color: #ac6d10;
+}
