@@ -1,53 +1,10 @@
-
-body {
-    background-color: #C9CAD9;
-    padding-top: 70px;
-}
-
-nav {
-    background-color: #576490;
-}
-
-.navbar a {
-    color: white;
-}
-
-.navbar-brand {
-    font-size: x-large;
-    color: #EDEDFD;
-}
-
-.navbar a:hover {
-    color: purple;
-}
-
-.footer {
-    background-color: #99A3C2;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-}
-
-.footer > .container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.footer a, p {
-    color: white;
-
-}
-
-
 .jumbo-image {
     max-width: 100%;
     height: auto;
 }
 
 h2 {
-    color: #436CB1;
+    color: #684a3af1;
     text-align: center;
     padding: 10px;
 }

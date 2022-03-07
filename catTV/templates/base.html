@@ -19,7 +19,9 @@
     
 
     <!-- Custom CSS-->
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/base.css') }}">
+
+    {% block cssLinks %}{% endblock %}
 
     <title>
         {% block title %}{% endblock %}
@@ -63,9 +65,9 @@
 
     <footer class="footer">
         <div class="container">
-            <p> By 
-                <a href="https://amandasteinhauer.github.io/personal-website/">Amanda Steinhauer</a>
-            </p>
+            <span class="text-muted"> By 
+                <a class="text-muted" href="https://amandasteinhauer.github.io/personal-website/">Amanda Steinhauer</a>
+            </span>
         </div>
     </footer>
 </body>

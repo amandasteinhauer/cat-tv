@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
+{% block cssLinks %}
+<!-- Custom CSS-->
+<link rel="stylesheet" href="{{ url_for('static', filename= 'css/home.css') }}">
+{% endblock %}
+
 {% block title %} CAT TV {% endblock %}
 
 {% block content %}

@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 
+{% block cssLinks %}
+<!-- Custom CSS-->
+<link rel="stylesheet" href="{{ url_for('static', filename= 'css/about.css') }}">
+{% endblock %}
+
 {% block title %} About CAT TV {% endblock %}
+
+{% block header %}
+    <div class="container header">
+        <h1>Cat TV</h1>
+        <p>Entertainment for cats everywhere</p>
+    </div>
+{% endblock %}
 
 {% block content %}
     <div class="container">

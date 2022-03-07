@@ -1,0 +1,36 @@
+body {
+    background-color: #fff4de;
+    padding-top: 50px;
+}
+
+nav {
+    background-color: black;
+}
+
+.navbar a {
+    color: #eb9414;
+}
+
+.navbar-brand {
+    font-size: x-large;
+    color: #ff7a00;
+}
+
+.navbar li a:hover {
+    color: white;
+    background-color: black;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #E2E6DC;
+}
+
+.footer > .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
