@@ -28,7 +28,16 @@ nav {
 }
 
 .navbar a {
-    color: #eb9414;
+    color: #f0b55d;
+}
+
+#navbarToggle {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar-toggle .icon-bar{
+    background-color: #f0b55d;
 }
 
 #main-nav > li > a:focus, #main-nav > li > a:hover {
