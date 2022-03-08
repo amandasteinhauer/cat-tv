@@ -1,12 +1,13 @@
 import Ball from "./Ball.js";
 
-let canvas, ctx, balls, requestID;
+let canvas, ctx, balls, requestID, stopped;
 const colors = ["brown", "black", "white", "burlywood", "chocolate", "grey"];
 
 var numBalls = 1;
 let ballsDisplay = document.getElementById("numBalls")
 
 function startBouncingBallGame() {
+  stopped = false
   // get the canvas and context
   canvas = document.getElementById("bouncingBallCanvas");
   ctx = canvas.getContext("2d");
@@ -20,13 +21,20 @@ function startBouncingBallGame() {
 }
 
 function stopBouncingBallGame() {
+  stopped = true
   window.cancelAnimationFrame(requestID);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  balls.forEach((ball) => ball.draw(ctx));
 }
 
 function moreBalls() {
   if(numBalls < 10){
     numBalls += 1
     ballsDisplay.innerHTML = numBalls
+    balls.push(
+      createBall()
+    );
+
   } 
   
   if(numBalls >= 10){
@@ -42,6 +50,7 @@ function lessBalls() {
   if(numBalls >= 1){
     numBalls -= 1
     ballsDisplay.innerHTML = numBalls
+    balls.pop();
   } 
 
   if(numBalls == 0){
@@ -62,31 +71,37 @@ function createBalls(numBalls) {
   balls = [];
   for (let i = 0; i < numBalls; i++) {
     balls.push(
-      new Ball(
-        Math.random() * canvas.width,
-        Math.random() * canvas.height,
-        {
-          width: canvas.width,
-          height: canvas.height
-        },
-        {
-          color: colors[Math.floor(Math.random() * colors.length)],
-        }
-      )
+      createBall()
     );
   }
 }
 
+function createBall(){
+  return new Ball(
+    Math.random() * canvas.width,
+    Math.random() * canvas.height,
+    {
+      width: canvas.width,
+      height: canvas.height
+    },
+    {
+      color: colors[Math.floor(Math.random() * colors.length)],
+    }
+  )
+}
+
 function update() {
-  // queue the next update
-  requestID = window.requestAnimationFrame(() => update());
+  if (!stopped){
+    // queue the next update
+    requestID = window.requestAnimationFrame(() => update());
 
-  // clear the canvas
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // update objects
-  balls.forEach((ball) => ball.move());
+    // update objects
+    balls.forEach((ball) => ball.move());
 
-  // draw objects
-  balls.forEach((ball) => ball.draw(ctx));
+    // draw objects
+    balls.forEach((ball) => ball.draw(ctx));
+  }
 }

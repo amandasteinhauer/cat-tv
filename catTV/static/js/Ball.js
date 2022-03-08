@@ -28,6 +28,13 @@ export class Ball {
   move() {
     const { props, sceneProps } = this;
 
+    if (this.velX == 0){
+      this.velX = 1
+    }
+    if (this.velY == 0){
+      this.velY = 1
+    }
+
     // bottom bound / floor
     if (this.y + props.radius >= sceneProps.height) {
       this.velY = 0 - this.velY;
