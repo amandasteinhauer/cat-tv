@@ -3,3 +3,8 @@ window.onbeforeunload = () => {
       form.reset();
     }
   }
+
+$("#videoCategoryOptions a").click(function() {
+  option = $(this).data('value');
+  $("#dropdownText").text(option);
+});

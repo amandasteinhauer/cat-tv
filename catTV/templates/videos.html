@@ -15,9 +15,24 @@
             Cats love birds
         </h1>
         <p>
-            Play a video of birds to excite your cat!
+            Play a video to excite your cat!
         </p>
         <br/>
+        <div class="dropdown">
+            <h6>Select a Category: </h6>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="videoCategoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div id="dropdownText">{{ category }}</div>
+                <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="videoCategoryOptions">
+                <a class="dropdown-item" data-value="Birds" href="{{ url_for('videos', category='Birds') }}">Birds</a>
+                <a class="dropdown-item" data-value="Squirrels" href="{{ url_for('videos', category='Squirrels') }}">Squirrels</a>
+                <a class="dropdown-item" data-value="Mice" href="{{ url_for('videos', category='Mice') }}">Mice</a>
+                <a class="dropdown-item" data-value="Fish" href="{{ url_for('videos', category='Fish') }}">Fish</a>
+                <a class="dropdown-item" data-value="Games" href="{{ url_for('videos', category='Games') }}">Games</a>
+                <a class="dropdown-item" data-value="All" href="{{ url_for('videos', category='All') }}">All</a>
+            </div>
+        </div>
         <br/>
         <div id="video-container">
             {% for video in videos %}
